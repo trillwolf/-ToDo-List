@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FHL-gF-IkK">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TO DO: -->
+        <scene sceneID="Lg3-tk-02j">
+            <objects>
+                <tableViewController id="dc7-9C-MUB" customClass="TableViewController" customModule="todo_sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FGQ-OG-JSo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCell" id="Tlt-mi-V8M">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tlt-mi-V8M" id="55n-Nw-6SE">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dc7-9C-MUB" id="Zec-Q2-4iE"/>
+                            <outlet property="delegate" destination="dc7-9C-MUB" id="Him-aL-5kE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="TO DO: " largeTitleDisplayMode="always" id="RFK-3y-fML">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="X8U-v5-xni">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="z5Z-Ek-ku6" kind="show" id="8Os-Rm-GxX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PAf-zW-pvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894" y="130"/>
+        </scene>
+        <!--Input Controller-->
+        <scene sceneID="cv7-bX-qiN">
+            <objects>
+                <viewController id="z5Z-Ek-ku6" customClass="InputController" customModule="todo_sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aeG-C6-GzN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="3q4-jg-avb">
+                                <rect key="frame" x="-8" y="0.0" width="430" height="1041"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="7H7-70-sqC">
+                                <rect key="frame" x="62" y="306.5" width="290" height="283"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T y p e  a n  a c t i o n   d o w n   b e l o w : " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axM-Yi-mNb">
+                                        <rect key="frame" x="0.5" y="0.0" width="289" height="135"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="135" id="Zpu-XP-rED"/>
+                                            <constraint firstAttribute="width" constant="289" id="kyS-fL-Odx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="44"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwc-YM-X7x">
+                                        <rect key="frame" x="0.0" y="173" width="290" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="8dj-uz-llr"/>
+                                            <constraint firstAttribute="height" constant="31" id="B6u-dB-srT"/>
+                                            <constraint firstAttribute="width" constant="290" id="Djd-0q-L6T"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="eSM-eS-nqY"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2a-LN-ZkP">
+                                        <rect key="frame" x="72" y="242" width="146" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="146" id="MqM-ee-xrG"/>
+                                            <constraint firstAttribute="height" constant="41" id="o19-qp-OvU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="26"/>
+                                        <state key="normal" title="S U B M I T ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitTask:" destination="z5Z-Ek-ku6" eventType="touchUpInside" id="EOc-0A-WQG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7H7-70-sqC" firstAttribute="centerX" secondItem="aeG-C6-GzN" secondAttribute="centerX" id="3RD-YD-p32"/>
+                            <constraint firstItem="7H7-70-sqC" firstAttribute="centerY" secondItem="aeG-C6-GzN" secondAttribute="centerY" id="u3J-kY-kQR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tnH-Ct-rKu"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputField" destination="xwc-YM-X7x" id="hhF-AU-UuG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2g9-Kr-EFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1786.9565217391305" y="129.91071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="b6S-cI-i1G">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FHL-gF-IkK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" alpha="0.94999999999999996" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="aaC-Nu-ReK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.033983107499999998" green="0.51896786449999999" blue="0.66313958500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dc7-9C-MUB" kind="relationship" relationship="rootViewController" id="JuD-NJ-v5w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IaV-X7-PTP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42.028985507246382" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="1080" height="1920"/>
+    </resources>
+</document>
